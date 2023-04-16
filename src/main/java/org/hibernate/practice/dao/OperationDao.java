@@ -2,13 +2,44 @@ package org.hibernate.practice.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.practice.model.Account;
+import org.hibernate.practice.model.Card;
+import org.hibernate.practice.model.Merchant;
 import org.hibernate.practice.model.Operation;
 import org.hibernate.practice.util.ConnectionUtil;
+import org.hibernate.query.Query;
 
+import java.util.Currency;
 import java.util.List;
 import java.util.Objects;
 
 public class OperationDao {
+
+    public void getOperation(Card card, Merchant merchant, Double amount, String currency){
+card.getAccountIban();
+merchant.getUrl();
+    }
+
+    public String hidePanNumbers(String panNumber){return  "*".repeat(12)+panNumber.substring(12);}
+
+    public Account getAccountByIban (String accountIban) {
+        getAccounts().forEach(account -> {
+            if (account.getIban()==accountIban) {
+                return account;}
+        });
+
+    return }
+
+    public List <Account> getAccounts (){
+    try {
+        Session session = ConnectionUtil.getSessionFactory().openSession();
+        return session.createQuery("FROM Account", Account.class).list();
+        }catch (Exception exception){
+        exception.printStackTrace();
+    }
+    return null;}
+
+
     public void addOperation(Operation operation) {
         Session session = ConnectionUtil.getSessionFactory().openSession();
         Transaction transaction = null;

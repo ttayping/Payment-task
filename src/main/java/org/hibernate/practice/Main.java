@@ -17,11 +17,11 @@ public class Main {
         MerchantDao merchantDao = new MerchantDao();
         OperationDao operationDao = new OperationDao();
 
-        accountDao.addAccount(new Account("Tahir",
-                "Hasanov","AZ21901512"));
+        accountDao.addAccount(new Account("Elcin",
+                "Iskenderov","AZ2195821"));
 
-        cardDao.addCard(new Card("AZ21901512",
-                4169738818140825L,100D));
+        cardDao.addCard(new Card("AZ2195821",
+                "4169738892611244L",100D));
         merchantDao.addMerchant(new Merchant("CoffeeShop",
                 "LogoCoffeeShop",0D));
 

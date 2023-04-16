@@ -18,11 +18,11 @@ public class Card {
     @Column(name = "account_iban")
     private String accountIban;
     @Column(name = "pan_number")
-    private Long panNumber;
+    private String panNumber;
     @Column(name = "card_balance")
     private Double cardBalance;
 
-    public Card(String accountIban, Long panNumber, Double cardBalance) {
+    public Card(String accountIban, String panNumber, Double cardBalance) {
         this.accountIban = accountIban;
         this.panNumber = panNumber;
         this.cardBalance = cardBalance;
