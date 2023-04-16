@@ -20,5 +20,6 @@ public class Account {
     @Column(name = "surname")
     private String surname;
     @Column(name = "Iban")
-    private Integer Iban;
+    private String Iban;
+
 }

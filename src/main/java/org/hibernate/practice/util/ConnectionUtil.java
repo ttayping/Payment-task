@@ -19,7 +19,7 @@ public class ConnectionUtil {
             Configuration configuration = new Configuration();
 
             configuration.setProperty("hibernate.connection.driver_class", "com.mysql.cj.jdbc.Driver");
-            configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/aptek");
+            configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/payment_system");
             configuration.setProperty("hibernate.connection.username", "root");
             configuration.setProperty("hibernate.connection.password", "admin");
 
