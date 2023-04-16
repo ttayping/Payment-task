@@ -16,7 +16,7 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cardId;
     @Column(name = "account_iban")
-    private Integer accountIban;
+    private String accountIban;
     @Column(name = "pan_number")
     private Long panNumber;
     @Column(name = "card_balance")

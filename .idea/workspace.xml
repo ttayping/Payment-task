@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ad1906b-f002-4a56-ad3f-a9b530ff1690" name="Changes" comment="Elcin 1.0">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/OperationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/util/ConnectionUtil.java" afterDir="false" />
+    <list default="true" id="4ad1906b-f002-4a56-ad3f-a9b530ff1690" name="Changes" comment="Elcin 1.1">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/AccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/CardDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/MerchantDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/util/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/util/ConnectionUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ce055682-3984-485e-b209-d833d123a3e6" />
+        <option name="url" value="https://github.com/ttayping/Payment-task.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectId" id="2OQa80FlhvvgDxxN3eHtHq4qxfl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -80,8 +93,65 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RunManager" selected="Gradle.Payment-task [build]">
+    <configuration name="Payment-task [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="Payment-task [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Payment-task [build]" />
+        <item itemvalue="Gradle.Payment-task [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +164,7 @@
       <workItem from="1681496151265" duration="1746000" />
       <workItem from="1681573671847" duration="2299000" />
       <workItem from="1681659442973" duration="1739000" />
-      <workItem from="1681661206813" duration="1517000" />
+      <workItem from="1681661206813" duration="3883000" />
     </task>
     <task id="LOCAL-00001" summary="Elcin 1.0">
       <created>1681659624100</created>
@@ -103,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681659624100</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Elcin 1.1">
+      <created>1681662743052</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681662743052</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +199,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Elcin 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Elcin 1.0" />
+    <MESSAGE value="Elcin 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Elcin 1.1" />
   </component>
 </project>
