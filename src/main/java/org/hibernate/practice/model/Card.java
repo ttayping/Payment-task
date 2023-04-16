@@ -22,4 +22,9 @@ public class Card {
     @Column(name = "card_balance")
     private Double cardBalance;
 
+    public Card(String accountIban, Long panNumber, Double cardBalance) {
+        this.accountIban = accountIban;
+        this.panNumber = panNumber;
+        this.cardBalance = cardBalance;
+    }
 }

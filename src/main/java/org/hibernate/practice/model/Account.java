@@ -22,4 +22,9 @@ public class Account {
     @Column(name = "Iban")
     private String Iban;
 
+    public Account(String name, String surname, String iban) {
+        this.name = name;
+        this.surname = surname;
+        Iban = iban;
+    }
 }

@@ -25,6 +25,13 @@ public class Operation {
     @Column(name = "date")
     private LocalDate date;
 
+    public Operation(Long accountCard, String merchantName, Double amount, LocalDate date) {
+        this.accountCard = accountCard;
+        this.merchantName = merchantName;
+        this.amount = amount;
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "Operation{" +

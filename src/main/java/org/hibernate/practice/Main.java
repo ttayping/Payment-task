@@ -17,16 +17,13 @@ public class Main {
         MerchantDao merchantDao = new MerchantDao();
         OperationDao operationDao = new OperationDao();
 
-        Account account1 = Account.builder()
-                .name("Tahir")
-                .surname("Khan")
-                .Iban("123456789")
-                .build();
+        accountDao.addAccount(new Account("Tahir",
+                "Hasanov","AZ21901512"));
 
-        Card card1 = Card.builder().panNumber(4169738818010425L).
-                cardBalance(100D).accountIban("25634516").build();
-        Merchant merchant1 = Merchant.builder().name("CoffeeMoffee")
-                .balance(0D).url("logoCoffeeMoffee").build();
+        cardDao.addCard(new Card("AZ21901512",
+                4169738818140825L,100D));
+        merchantDao.addMerchant(new Merchant("CoffeeShop",
+                "LogoCoffeeShop",0D));
 
     }
 }

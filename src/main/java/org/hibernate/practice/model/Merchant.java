@@ -21,4 +21,10 @@ public class Merchant {
     private String url;
     @Column(name = "balance")
     private Double balance;
+
+    public Merchant(String name, String url, Double balance) {
+        this.name = name;
+        this.url = url;
+        this.balance = balance;
+    }
 }
