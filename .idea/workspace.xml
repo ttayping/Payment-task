@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ad1906b-f002-4a56-ad3f-a9b530ff1690" name="Changes" comment="Elcin 1.1">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/CardDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/MerchantDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/util/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/util/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Merchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Operation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +40,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="PaymentTask" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PaymentTask" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -100,7 +104,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.Payment-task [build]">
+  <component name="RunManager">
     <configuration name="Payment-task [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -164,7 +168,7 @@
       <workItem from="1681496151265" duration="1746000" />
       <workItem from="1681573671847" duration="2299000" />
       <workItem from="1681659442973" duration="1739000" />
-      <workItem from="1681661206813" duration="3883000" />
+      <workItem from="1681661206813" duration="5236000" />
     </task>
     <task id="LOCAL-00001" summary="Elcin 1.0">
       <created>1681659624100</created>
@@ -180,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681662743052</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Elcin 1.1">
+      <created>1681665395821</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681665395821</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
