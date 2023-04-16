@@ -1,11 +1,25 @@
 package org.hibernate.practice.model;
 
-import java.time.LocalDate;
+import lombok.*;
 
+import javax.persistence.*;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "cards")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Card {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cardId;
+    @Column(name = "account_iban")
+    private Integer accountIban;
+    @Column(name = "pan_number")
     private Long panNumber;
-    private LocalDate expireDate;
-    private Integer cvv;
-    private String cardType;
+    @Column(name = "card_balance")
+    private Double cardBalance;
+
 }
