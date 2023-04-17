@@ -4,9 +4,9 @@ import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
-
 @Getter
 @Setter
+
 @Entity
 @Table(name = "cards")
 @NoArgsConstructor(force = true)
@@ -28,6 +28,7 @@ public class Card {
     @Override
     public String toString() {
         return "Card{" +
+
                 "cardId=" + cardId +
                 ", accountIban='" + accountIban + '\'' +
                 ", panNumber='" + panNumber + '\'' +

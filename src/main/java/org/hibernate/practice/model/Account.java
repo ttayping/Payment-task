@@ -5,8 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+
 @Entity
 @Table(name = "account_list")
 @NoArgsConstructor(force = true)
@@ -25,6 +24,7 @@ public class Account {
     @NotNull
     @Column(name = "iban",unique = true)
     private String iban;
+
     @Override
     public String toString() {
         return "Account{" +

@@ -1,6 +1,7 @@
 package org.hibernate.practice.model;
 
 import com.sun.istack.NotNull;
+
 import lombok.*;
 
 import javax.persistence.*;
