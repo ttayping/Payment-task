@@ -1,5 +1,6 @@
 package org.hibernate.practice.model;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -8,27 +9,22 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "account_list")
-
+@NoArgsConstructor(force = true)
 @AllArgsConstructor
 @Builder
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     @Column(name = "name")
     private String name;
+    @NotNull
     @Column(name = "surname")
     private String surname;
-    @Column(name = "iban")
+    @NotNull
+    @Column(name = "iban",unique = true)
     private String iban;
-
-    public Account(){}
-    public Account(String name, String surname, String iban) {
-        this.name = name;
-        this.surname = surname;
-        this.iban = iban;
-    }
-
     @Override
     public String toString() {
         return "Account{" +
