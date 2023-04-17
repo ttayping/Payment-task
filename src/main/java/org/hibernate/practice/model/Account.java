@@ -19,12 +19,12 @@ public class Account {
     private String name;
     @Column(name = "surname")
     private String surname;
-    @Column(name = "Iban")
-    private String Iban;
+    @Column(name = "iban")
+    private String iban;
 
     public Account(String name, String surname, String iban) {
         this.name = name;
         this.surname = surname;
-        Iban = iban;
+        this.iban = iban;
     }
 }
