@@ -1,5 +1,7 @@
 package org.hibernate.practice.model;
-//id logo name
+
+import com.sun.istack.NotNull;
+
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,16 +17,23 @@ public class Merchant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long merchantId;
-    @Column(name = "name")
+    @NotNull
+    @Column(name = "name",unique = true)
     private String name;
-    @Column(name = "url")
+    @NotNull
+    @Column(name = "url",unique = true)
     private String url;
+    @NotNull
     @Column(name = "balance")
     private Double balance;
 
-    public Merchant(String name, String url, Double balance) {
-        this.name = name;
-        this.url = url;
-        this.balance = balance;
+    @Override
+    public String toString() {
+        return "Merchant{" +
+                "merchantId=" + merchantId +
+                ", name='" + name + '\'' +
+                ", url='" + url + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }

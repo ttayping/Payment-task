@@ -1,5 +1,6 @@
 package org.hibernate.practice.model;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,34 +10,31 @@ import java.time.LocalDate;
 @Setter
 @Entity
 @Table(name = "operations")
-@NoArgsConstructor
+@NoArgsConstructor(force = true)
 @AllArgsConstructor
 @Builder
 public class Operation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long accountId;
-    @Column(name = "account_card")
-    private Long accountCard;
+    @NotNull
+    @Column(name = "card_pan")
+    private String cardPan;
+    @NotNull
     @Column(name = "merchant_name")
     private String merchantName;
+    @NotNull
     @Column(name = "amount")
     private Double amount;
+    @NotNull
     @Column(name = "date")
     private LocalDate date;
-
-    public Operation(Long accountCard, String merchantName, Double amount, LocalDate date) {
-        this.accountCard = accountCard;
-        this.merchantName = merchantName;
-        this.amount = amount;
-        this.date = date;
-    }
 
     @Override
     public String toString() {
         return "Operation{" +
                 "accountId=" + accountId +
-                ", accountCard=" + accountCard +
+                ", cardPan=" + cardPan +
                 ", merchantName='" + merchantName + '\'' +
                 ", amount=" + amount +
                 ", date=" + date +

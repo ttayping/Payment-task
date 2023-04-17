@@ -2,14 +2,10 @@ package org.hibernate.practice.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.practice.model.Account;
 import org.hibernate.practice.model.Card;
 import org.hibernate.practice.model.Merchant;
 import org.hibernate.practice.model.Operation;
 import org.hibernate.practice.util.ConnectionUtil;
-import org.hibernate.query.Query;
-
-import java.util.Currency;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,6 +34,7 @@ public class OperationDao {
         return "*".repeat(12) + panNumber.substring(12);
     }
 
+
     public Card getCardByPrimaryKey(String panNumber) {
         Session session = ConnectionUtil.getSessionFactory().openSession();
         try {
@@ -51,6 +48,7 @@ public class OperationDao {
 
     public Card getCardByPan(String panNumber){
         Session session=ConnectionUtil.getSessionFactory().openSession();
+
         try {
             return (Card) session.createQuery("FROM Card WHERE panNumber = :panNumber")
                     .setParameter("panNumber", panNumber).uniqueResult();
