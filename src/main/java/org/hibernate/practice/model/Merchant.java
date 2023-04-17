@@ -1,5 +1,5 @@
 package org.hibernate.practice.model;
-
+//id logo name
 import lombok.*;
 
 import javax.persistence.*;

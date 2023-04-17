@@ -16,7 +16,7 @@ public class Main {
         CardDao cardDao = new CardDao();
         MerchantDao merchantDao = new MerchantDao();
         OperationDao operationDao = new OperationDao();
-
+//
 //        accountDao.addAccount(new Account("Aghaselim",
 //                "Piriyev","AZ2178132"));
 //
@@ -24,17 +24,18 @@ public class Main {
 //                "Agalarov","AZ2131254"));
 //
 //        cardDao.addCard(new Card("AZ2131254",
-//                "4169738892654387L",100D));
+//                "4169738892654387",100D));
 //        cardDao.addCard(new Card("AZ2131254",
-//                "4169738867463289L",100D));
+//                "4169738867463289",100D));
 //        cardDao.addCard(new Card("AZ2178132",
+//                "4169738822643890",100D));
+//        Card card1 = new Card("AZ2178132",
 //                "4169738822643890L",100D);
-        Card card1 = new Card("AZ2178132",
-                "4169738822643890L",100D);
-        Merchant merchant1 = new Merchant("CoffeeShop",
-                "LogoCoffeeShop",0D);
-
-        operationDao.getOperation(card1,merchant1,4D);
+//        Merchant merchant1 = new Merchant("CoffeeShop",
+//                "LogoCoffeeShop",0D);
+      //  System.out.println(operationDao.getCardByPan("4169738822643890"));
+//operationDao.getCardByPan("4169738822643890");
+       // operationDao.getOperation(card1,merchant1,4D);
 
 //        merchantDao.addMerchant(new Merchant("CoffeeShop",
 //                "LogoCoffeeShop",0D));

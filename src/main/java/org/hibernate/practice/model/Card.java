@@ -3,9 +3,9 @@ package org.hibernate.practice.model;
 import lombok.*;
 
 import javax.persistence.*;
-
 @Getter
 @Setter
+
 @Entity
 @Table(name = "cards")
 @NoArgsConstructor
@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cardId;
+    private Long id;
     @Column(name = "account_iban")
     private String accountIban;
     @Column(name = "pan_number")
@@ -22,9 +22,13 @@ public class Card {
     @Column(name = "card_balance")
     private Double cardBalance;
 
-    public Card(String accountIban, String panNumber, Double cardBalance) {
-        this.accountIban = accountIban;
-        this.panNumber = panNumber;
-        this.cardBalance = cardBalance;
+    @Override
+    public String toString() {
+        return "Card{" +
+                "id=" + id +
+                ", accountIban='" + accountIban + '\'' +
+                ", panNumber='" + panNumber + '\'' +
+                ", cardBalance=" + cardBalance +
+                '}';
     }
 }

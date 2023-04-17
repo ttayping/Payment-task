@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ad1906b-f002-4a56-ad3f-a9b530ff1690" name="Changes" comment="Elcin 1.3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/OperationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/dao/OperationDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/model/Merchant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/util/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hibernate/practice/util/ConnectionUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +64,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -130,6 +133,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="Payment-task [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -151,6 +155,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
