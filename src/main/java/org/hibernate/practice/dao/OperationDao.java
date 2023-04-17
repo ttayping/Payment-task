@@ -15,29 +15,47 @@ import java.util.Objects;
 
 public class OperationDao {
 
-    public void getOperation(Card card, Merchant merchant, Double amount, String currency){
-card.getAccountIban();
-merchant.getUrl();
-    }
+    public void getOperation(Card card, Merchant merchant, Double amount) {      // don't forger add currency
 
-    public String hidePanNumbers(String panNumber){return  "*".repeat(12)+panNumber.substring(12);}
-
-    public Account getAccountByIban (String accountIban) {
-        getAccounts().forEach(account -> {
-            if (account.getIban()==accountIban) {
-                return account;}
-        });
-
-    return }
-
-    public List <Account> getAccounts (){
-    try {
+        System.out.println( card.getAccountIban());
+        System.out.println(merchant.getUrl());
         Session session = ConnectionUtil.getSessionFactory().openSession();
-        return session.createQuery("FROM Account", Account.class).list();
-        }catch (Exception exception){
-        exception.printStackTrace();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+        card.setCardBalance(card.getCardBalance()-amount);
+        merchant.setBalance(merchant.getBalance()+amount);
+            transaction.commit();}
+        catch (Exception exception){
+            if (transaction!=null){
+                transaction.rollback();
+            }exception.printStackTrace();
+        }
     }
-    return null;}
+
+    public String hidePanNumbers(String panNumber) {
+        return "*".repeat(12) + panNumber.substring(12);
+    }
+
+//    public Account getAccountByIban(String accountIban) {
+//        List<Account> accountList = getAccounts();
+//        accountList.forEach(account -> {
+//            if (account.getIban() == accountIban) {
+//                return account;
+//            }
+//        });
+//        return null;
+//    }
+
+    public List<Account> getAccounts() {
+        try {
+            Session session = ConnectionUtil.getSessionFactory().openSession();
+            return session.createQuery("FROM Account", Account.class).list();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+        return null;
+    }
 
 
     public void addOperation(Operation operation) {

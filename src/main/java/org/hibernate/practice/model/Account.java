@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "account_list")
-@NoArgsConstructor
+
 @AllArgsConstructor
 @Builder
 public class Account {
@@ -22,9 +22,20 @@ public class Account {
     @Column(name = "iban")
     private String iban;
 
+    public Account(){}
     public Account(String name, String surname, String iban) {
         this.name = name;
         this.surname = surname;
         this.iban = iban;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", iban='" + iban + '\'' +
+                '}';
     }
 }
