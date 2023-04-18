@@ -25,10 +25,25 @@ public class MerchantDao {
             session.close();
         }
     }
+    public void updateMerchant(Merchant merchant) {
+        Session session = ConnectionUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        try {
+            tx = session.beginTransaction();
+            session.update(merchant); // Update operation
+            tx.commit();
+        } catch (Exception ex) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            ex.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
 
     public List<Merchant> selectAll() {
         try (Session session = ConnectionUtil.getSessionFactory().openSession()) {
-            // HQL query to fetch all Persons
             return session.createQuery("FROM Merchant", Merchant.class).list();
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,7 +55,7 @@ public class MerchantDao {
         Transaction transaction = null;
         try (Session session = ConnectionUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
-            session.delete(Merchant); // Delete Merchant
+            session.delete(Merchant);
             transaction.commit();
         } catch (Exception ex) {
             if (Objects.nonNull(transaction)) {
@@ -48,5 +63,17 @@ public class MerchantDao {
             }
             ex.printStackTrace();
         }
+    }
+    public Merchant getMerchantByName(String merchantName){
+        Session session = ConnectionUtil.getSessionFactory().openSession();
+        try{
+            return (Merchant) session.createQuery("from Merchant where name = :merchantName")
+                    .setParameter("merchantName" , merchantName).uniqueResult();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return null;
     }
 }

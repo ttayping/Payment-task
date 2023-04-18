@@ -6,58 +6,63 @@ import org.hibernate.practice.model.Card;
 import org.hibernate.practice.model.Merchant;
 import org.hibernate.practice.model.Operation;
 import org.hibernate.practice.util.ConnectionUtil;
+
 import java.util.List;
 import java.util.Objects;
 
 public class OperationDao {
+    MerchantDao merchantDao = new MerchantDao();
+    CardDao cardDao = new CardDao();
+    AccountDao accountDao = new AccountDao();
 
-    public void getOperation(Card card, Merchant merchant, Double amount) { // don't forget add currency
-
-
-        System.out.println(merchant.getUrl());
+    private void addOperation(Operation operation) {
         Session session = ConnectionUtil.getSessionFactory().openSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            card.setCardBalance(card.getCardBalance() - amount);
-            merchant.setBalance(merchant.getBalance() + amount);
+            session.save(operation);
             transaction.commit();
         } catch (Exception exception) {
             if (transaction != null) {
                 transaction.rollback();
             }
             exception.printStackTrace();
-        }
-    }
-
-    public String hidePanNumbers(String panNumber) {
-        return "*".repeat(12) + panNumber.substring(12);
-    }
-
-
-    public Card getCardByPrimaryKey(String panNumber) {
-        Session session = ConnectionUtil.getSessionFactory().openSession();
-        try {
-            return session.get(Card.class, panNumber);
-        } catch (Exception exception) {
-            exception.printStackTrace();
         } finally {
             session.close();
         }
-        return null;}
+    }
 
-    public Card getCardByPan(String panNumber){
-        Session session=ConnectionUtil.getSessionFactory().openSession();
-
+    public void createOperation(String panNumber, String merchantName, Double amount) { // don't forget add currency
+        Operation operation = new Operation(panNumber, merchantName, amount);
         try {
-            return (Card) session.createQuery("FROM Card WHERE panNumber = :panNumber")
-                    .setParameter("panNumber", panNumber).uniqueResult();
-        }catch (Exception exception){
+            balanceOperation(operation);
+            addOperation(operation);
+            showOperationInfo(operation);
+        } catch (Exception exception) {
             exception.printStackTrace();
-        }finally {
-            session.close();
         }
-    return null;}
+    }
 
+    private void balanceOperation(Operation operation) {
+        try {
+            Merchant merchant = merchantDao.getMerchantByName(operation
+                    .getMerchantName());
 
+            Card card = cardDao.getCardByPan(operation.getCardPan());
+            card.setCardBalance(card.getCardBalance() - operation.getAmount());
+            merchant.setBalance(merchant.getBalance() + operation.getAmount());
+            merchantDao.updateMerchant(merchant);
+            cardDao.updateCard(card);
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public void showOperationInfo(Operation operation) {
+        System.out.println("Merchant logo" + merchantDao.getMerchantByName(operation
+                .getMerchantName()).getUrl());
+        System.out.println(cardDao.hidePanNumbers(operation.getCardPan()));
+        System.out.println(accountDao.getAccountByIban(cardDao
+                .getCardByPan(operation.getCardPan()).getAccountIban()));
+    }
 }

@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -28,7 +29,14 @@ public class Operation {
     private Double amount;
     @NotNull
     @Column(name = "date")
-    private LocalDate date;
+    private LocalDateTime date;
+
+    public Operation(String cardPan, String merchantName, Double amount) {
+        this.cardPan = cardPan;
+        this.merchantName = merchantName;
+        this.amount = amount;
+        this.date= LocalDateTime.now();
+    }
 
     @Override
     public String toString() {

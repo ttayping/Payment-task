@@ -48,12 +48,13 @@ public class AccountDao {
             }
             ex.printStackTrace();
         }
-    }public Account getAccountByIban(String accountIban) {
+    }
+
+    public Account getAccountByIban(String accountIban) {
         Session session = ConnectionUtil.getSessionFactory().openSession();
-        Account account = null;
-        try{
+        try {
             return (Account) session.createQuery("from Account where iban = :accountIban")
-                    .setParameter("accountIban" , accountIban).uniqueResult();
+                    .setParameter("accountIban", accountIban).uniqueResult();
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
@@ -61,6 +62,7 @@ public class AccountDao {
         }
         return null;
     }
+
     public List<Account> getAccounts() {
         try {
             Session session = ConnectionUtil.getSessionFactory().openSession();

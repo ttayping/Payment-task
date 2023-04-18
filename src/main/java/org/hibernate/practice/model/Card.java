@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Table(name = "cards")
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
+@Builder
 public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
